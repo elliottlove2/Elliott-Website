@@ -1,11 +1,71 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+    background-color: #2c2c2c; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header section for bio and image */
+.intro-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #4e342e; /* Dark brown */
+    color: #d7ccc8; /* Soft brown */
+}
+
+.profile-image {
+    width: 250px; /* Larger size */
+    height: 250px; /* Make it square */
+    object-fit: cover; /* Ensure it maintains square aspect ratio */
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-right: 20px;
+}
+
+.bio {
+    text-align: left;
 }
 
 h1 {
-    color: #0073e6;
+    color: #8d6e63; /* Medium brown */
+}
+
+p {
+    color: #a1887f; /* Lighter brown */
+}
+
+/* Gallery section */
+.gallery {
+    padding: 20px;
+    background-color: #3e2723; /* Darker brown */
+}
+
+.gallery h2 {
+    color: #8d6e63;
+    text-align: center;
+}
+
+/* Gallery grid layout - 2 columns */
+#gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Fixed 2-column layout */
+    gap: 15px; /* Space between images */
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 100%; /* Make the image take full width of the grid cell */
+    height: auto; /* Maintain original aspect ratio */
+    border-radius: 10xpx; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure single column on smaller screens */
+@media (max-width: 600px) {
+    #gallery-container {
+        grid-template-columns: 1fr; /* Single column on narrow screens */
+    }
 }
 

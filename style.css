@@ -57,8 +57,9 @@ p {
 
 .gallery-image {
     width: 100%; /* Make the image take full width of the grid cell */
-    height: auto; /* Maintain original aspect ratio */
-    border-radius: 10xpx; /* Slightly rounded corners */
+    height: 500px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio, crop if necessary */
+    border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -68,4 +69,5 @@ p {
         grid-template-columns: 1fr; /* Single column on narrow screens */
     }
 }
+
 
